@@ -15,7 +15,7 @@ programa que vai permitir ao usuário
 */
 
 #include "menu.hpp"
-#include "produto.hpp"
+#include "funcprog.hpp"
 
 int main(int argc, char const *argv[])
 {
@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
         "[4] Listar todos os produtos",
         "[5] Realizar uma venda",
         "[6] Listar todas as vendas",
-        "[7] Mostrar uma venda a partir de um código",
+        "[7] Mostrar uma venda a partir de um codigo",
         "[8] Mostrar total faturado",
         "[9] Sair"
         };
@@ -37,29 +37,30 @@ int main(int argc, char const *argv[])
     Produto produto2;
     Produtos produtos;
     produtos.insere_produto(&produto1);
+    produtos.insere_produto(new Produto(2, "Arroz", 6.00));
     produto2 = *produtos.obter_produto(1);
 
     cout << "Cod: " << produto2.get_codigo() << endl;
     cout << "Nome: " << produto2.get_nome() << endl;
     cout << "Preco: " << produto2.get_preco() << endl;
-    /* while(true){
+    while(true){
         mostrar_menu(itens_menu);
         opcao = obter_opcao(itens_menu.size());
         switch (opcao)
         {
         case 1:
-            incluir_produto(produtos);
+            incluir_produto(&produtos);
             break;
-        case 2:
+        /* case 2:
             excluir_produto(produtos);
             break;
         case 3:
             alterar_produto(produtos);        
-            break;
+            break; */
         case 4:
             listar_produtos(produtos);
             break;
-        case 5:
+        /* case 5:
             realizar_venda(vendas);
             break;
         case 6:
@@ -70,13 +71,13 @@ int main(int argc, char const *argv[])
             break;
         case 8:
             mostrar_faturado(vendas);
-            break; 
+            break; */
         case 9:
             exit(0);
-            break;
+            break; 
         
         default:
             break;
         }
-    }*/
+    }
 }

@@ -86,3 +86,8 @@ bool Produtos::verifica_existe(int codigo)
     }
     return false;
 }
+
+vector<Produto *> Produtos::obtem_lista_produtos()
+{
+    return this->lista_produtos;
+}

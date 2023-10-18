@@ -1,12 +1,16 @@
 #include "menu.hpp"
 
 void limpa_tela(){
-    system("clear");
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system ("clear");
+    #endif
 }
 
 void mostrar_menu(vector<string> itens_menu){
     limpa_tela();
-    cout << "Opções disponíveis: " << endl;
+    cout << "Opcoes disponiveis: " << endl;
     for(auto item:itens_menu){
         cout << item << endl;
     }

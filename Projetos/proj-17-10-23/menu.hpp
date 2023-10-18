@@ -10,6 +10,7 @@
 
 using namespace std;
 
+void limpa_tela();
 void mostrar_menu(vector<string> itens_menu);
 int obter_opcao(int tam);
 

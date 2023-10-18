@@ -34,6 +34,7 @@ class Produtos {
         Produto* obter_produto (int codigo);
         int exclui_produto(int codigo);
         bool verifica_existe(int codigo);
+        vector<Produto*> obtem_lista_produtos();
 };
 
 #endif
