@@ -35,14 +35,15 @@ int main(int argc, char const *argv[])
 
     Produto produto1(1, "Feijao", 12.00);
     Produto produto2;
+    Produto produto3(3, "Arroz", 6.00);
     Produtos produtos;
     produtos.insere_produto(&produto1);
-    produtos.insere_produto(new Produto(2, "Arroz", 6.00));
-    produto2 = *produtos.obter_produto(1);
+    produtos.insere_produto(&produto3);
+    // produto2 = *produtos.obter_produto(1);
 
-    cout << "Cod: " << produto2.get_codigo() << endl;
-    cout << "Nome: " << produto2.get_nome() << endl;
-    cout << "Preco: " << produto2.get_preco() << endl;
+    // cout << "Cod: " << produto2.get_codigo() << endl;
+    // cout << "Nome: " << produto2.get_nome() << endl;
+    // cout << "Preco: " << produto2.get_preco() << endl;
     while(true){
         mostrar_menu(itens_menu);
         opcao = obter_opcao(itens_menu.size());

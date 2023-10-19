@@ -43,3 +43,25 @@ void listar_produtos (Produtos produtos){
     cin.ignore();
     cin.get();
 }
+
+void realizar_venda(Vendas* vendas)
+{
+    int codigo;
+    int cod_item = 0;
+    Produtos produtos;
+    Produto produto;
+    cout << "===================================" << endl;
+    cout << "Inicio da Venda" << endl;
+    cout << "===================================" << endl;
+    cout << "Digite o código da venda: ";
+    cin >> codigo;
+
+    while (cod_item != -1){
+        cout << "Codigo do Item: ";
+        cin >> cod_item;
+        if (cod_item != -1){
+            // prod = produtos.obter_produto(cod_item);
+        }
+    }
+
+}
